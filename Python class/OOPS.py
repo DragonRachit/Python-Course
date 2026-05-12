@@ -32,14 +32,21 @@ class learn:
     def get_age(self):
         return self.__age
     
+    def set_age(self,new_age):
+        self.__age=new_age
+
     def vote(self):
         if self.get_age() >= 18:
-            print("Can vote")
+            print(f"Can vote {self.get_age()}")
         
 
 p1=learn("Nice", 20)
 # print(p1.get_age())
 # print(p1._learn__age) # name mangling concept
 
+
+p1.set_age(18)
 p1.vote()
+
+
 
